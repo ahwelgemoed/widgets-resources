@@ -7,7 +7,7 @@ describe("Carousel", () => {
     });
 
     it("enables the left arrow when it navigates from the first item", () => {
-        cy.get(".swiper-button-next").click();
+        cy.get(".swiper-button-next").click({ force: true });
         cy.get(".swiper-button-prev").should("be.visible");
     });
 
