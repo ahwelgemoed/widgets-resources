@@ -20,13 +20,13 @@ describe("Screenshots of the pages for", () => {
                             .then(() => {
                                 cy.wrap($page)
                                     .should("be.visible")
-                                    .wait(1000)
+                                    .wait(4000)
                                     .compareSnapshot(`${url.replace("/p/", "")}-${browserName}`, 0.1);
                             });
                     } else {
                         cy.wrap($page)
                             .should("be.visible")
-                            .wait(1000)
+                            .wait(4000)
                             .compareSnapshot(`${url.replace("/p/", "")}-${browserName}`, 0.1);
                     }
                 });
